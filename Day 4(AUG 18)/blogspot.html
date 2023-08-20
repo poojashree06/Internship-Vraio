@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+<style>
+.blog{
+    font-family: 'Times New Roman', Times, serif;
+}.image{
+    width: 35px;
+    height: 35px;
+}
+.card-columns{
+    width: 80%;
+    background-color: black;
+    align-items: center;
+    justify-items: center;
+    margin: 0 10rem;
+    color: azure;
+    border-radius: 8px;
+}
+.card-title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    padding-left: 5px;
+}
+.card-link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+/*.cards{
+    margin-top: 3%;
+}*/
+.card{
+    max-width: 100%;
+}
+.from{
+    font-style: italic;
+    font-weight: bolder;
+}
+.title{
+    font-style: italic;
+}
+img{
+    width: 60%;
+    border-radius: 0 5px 5px 0;
+}
+.first-post{
+    margin-bottom: 10%;
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="pt-2">
+      <div class="d-inline-flex bg-light col-md-5 px-5">
+        <a href="#" class="text-black no-text-decoration link-offset-5 link-underline link-underline-opacity-0">Subscribe</a>
+      </div>
+      <div class="d-inline-flex bg-light col-md-5">
+        <h1 class="text-center">Large</h1>
+      </div>
+      <a href="#" class="text-muted no-text-decoration link-offset-2 link-underline link-underline-opacity-0">
+        <img src="./search.png" class="image mx-1" alt="Search Icon" />
+      </a>
+      <div class="d-inline-flex bg-light col-md-1">
+        <button type="button" class="btn btn-outline-secondary">
+          Signup
+        </button>
+      </div>
+      <hr />
+    </header>
+
+    <div class="sticky-top my-3">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-automb-4 mb-lg-2">
+              <li class="nav-item">
+                <a class="nav-link mx-3" href="#">World</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-3" href="#">US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Technology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Design</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Culture</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Business</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Politics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Opinion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Science</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Health</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Style</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" href="#">Travel</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="title display-4 fst-italic">
+          Title of a longer featured blog post
+        </h1>
+        <p class="card-text my-4">
+          Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.
+        </p>
+        <p class="lead mb-0" ><a href="#"
+          class="text-white font-weight-bold">Continue Reading...</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row cards">
+      <div class="col-md-6 px-4">
+        <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <h3 class="mb-0">
+              <a class="text-dark no-text-decoration link-offset-2 link-underline link-underline-opacity-0"
+                href="#">Featured post</a>
+            </h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+              additional content.</p>
+            <a href="#" class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1">Continue
+              reading</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-lg-block" src="./Thumbnail.jpg" alt="Card image cap">
+        </div>
+      </div>
+
+      <div class="col-md-6 px-4">
+        <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3 class="mb-0">
+              <a class="text-dark no-text-decoration link-offset-2 link-underline link-underline-opacity-0"
+                href="#">Post Title</a>
+            </h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+              additional content.</p>
+            <a href="#" class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1">Continue
+              reading</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-lg-block" src="./Thumbnail.jpg" alt="Card image cap">
+
+        </div>
+      </div>
+    </div>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="from display- border-bottom">
+            From the Firehose
+          </h3>
+          <div class="first-post fs-6">
+            <!-- Blog Post -->
+            <h2 class="display-5 fw-bold">Sample blog post</h2>
+            <h6 class="text-muted">
+              January 1, 2014 by <a href="#"
+                class="no-text-decoration link-offset-2 link-underline link-underline-opacity-0">Mark</a></h6>
+            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+            <hr>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.
+            </p>
+            <h2>BlockQuotes</h2>
+            <p>This is an example BlockQuote in action.</p>
+            <blockquote class="blockquote">
+              <p>Quoted text goes here. </p>
+            </blockquote>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+
+            <h2><strong>Example Lists</strong></h2>
+            <p class="fs-6">
+              This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.
+            </p>
+            <ul>
+              <li>First Item</li>
+              <li>Second list item with a longer distance</li>
+              <li>Third list item to close it</li>
+            </ul>
+            <p>And this an ordered list</p>
+            <ul>
+              <li>First list item</li>
+              <li>Second list item with a longer distance</li>
+              <li>Third list item to close it</li>
+            </ul>
+            <p>Add this is a Definition list:</p>
+            <dl>
+              <dt>HypherText Markup Language(HTML):</dt>
+              <dd>The language is used to describe and define of the content Web Page.</dd>
+              <dt>Cascading Style Sheets(CSS): </dt>
+              <dd>Used to describe the appearance of Web Content.</dd>
+            </dl>
+            <h3><strong>Inline HTML elements</strong></h3>
+            <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>
+            </p>
+            <ul>
+              <li>
+                <strong>To Bold Text</strong>
+                , use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>
+              </li>
+              <li>
+                <em>To italize the text</em>
+                , use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>
+            </ul>
+            <h3><strong>Heading</strong></h3>
+            <p>   This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+          <h3>Sub-Heading</h3>
+            <p>
+              This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.
+            </p>
+            <code>Example code block</code>
+          </div>
+          <div class="second-post fs-6">
+            <h2 class="display-2">Another blog post</h2>
+            <h6 class="text-muted">
+              December 23, 2013 by <a href="#"
+                class="no-text-decoration link-offset-2 link-underline link-underline-opacity-0">Jacob</a></h6>
+            <p>
+              This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.
+              </p>
+              <p>
+              Longer quote goes here, maybe with some <strong> emphasized text </strong> in the middle of it.
+              </p>
+              <p>
+              This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.
+              </p>
+            </p>
+          </div>
+          <div class="third-post fs-6">
+          <h3>Example Table</h3>
+          <p>And don't forget about tables in these posts:</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Upvotes</th>
+                <th>Downvotes</th>
+              </tr>
+            </thead>
+              <tbody>
+                <td>Alice</td>
+                <td>10</td>
+                <td>11</td>
+              </tbody>
+              <tbody>
+                <td>Bob</td>
+                <td>14</td>
+                <td>10</td>
+              </tbody> 
+          </table>
+            <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+          </div>
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+            <a class="btn btn-outline-secondary rounded-pill disabled" href="#">Newer</a>
+          </nav>
+        </div>
+        <aside class="col-md-4 m-6 p-6">
+          <div class="p-3 mb-3 bg-dark-subtle text-black">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you..</p>
+          </div>
+
+          <div class="m-3">
+            <h4 class="font-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">March
+                  2014</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">February
+                  2014</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">January
+                  2014</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">December
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">November
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">October
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">September
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">August
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">July
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">June
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">May
+                  2013</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1" href="#">April
+                  2013</a></li>
+            </ol>
+          </div>
+
+          <div class="m-3">
+            <h4 class="font-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1"
+                  href="#">GitHub</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1"
+                  href="#">Twitter</a></li>
+              <li><a class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1"
+                  href="#">Facebook</a></li>
+            </ol>
+          </div>
+
+        </aside>
+      </div>
+
+    </main>
+    <footer class="footer">
+      <p class="text-center">&copy; 2023 - <a href="https://github.com/poojashree06"
+          class="no-text-decoration link-offset-2 link-underline link-underline-opacity-0">Poojashree M</a> | All Rights
+        Reserved</p>
+        <p class="text-center">
+          <a href="#">Back To Top</a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
