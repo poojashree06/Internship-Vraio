@@ -9,9 +9,10 @@
 <style>
 .blog{
     font-family: 'Times New Roman', Times, serif;
-}.image{
-    width: 35px;
-    height: 35px;
+}
+.image{
+    width: 20px;
+    height: 20px;
 }
 .card-columns{
     width: 80%;
@@ -58,16 +59,16 @@ img{
 <body>
   <div class="container">
     <header class="pt-2">
-      <div class="d-inline-flex bg-light col-md-5 px-5">
+      <div class="d-inline-flex bg-light col-sm-1 col-md-5 px-1">
         <a href="#" class="text-black no-text-decoration link-offset-5 link-underline link-underline-opacity-0">Subscribe</a>
       </div>
-      <div class="d-inline-flex bg-light col-md-5">
+      <div class="d-inline-flex bg-light col-md-5 px-4 col-sm-3">
         <h1 class="text-center">Large</h1>
       </div>
       <a href="#" class="text-muted no-text-decoration link-offset-2 link-underline link-underline-opacity-0">
-        <img src="./search.png" class="image mx-1" alt="Search Icon" />
+        <img src="./search.png" class="image col-md-4 col-sm-4 mx-1" alt="Search Icon" />
       </a>
-      <div class="d-inline-flex bg-light col-md-1">
+      <div class="d-inline-flex bg-light px-1 col-sm-1">
         <button type="button" class="btn btn-outline-secondary">
           Signup
         </button>
@@ -141,7 +142,7 @@ img{
     </div>
 
     <div class="row cards">
-      <div class="col-md-6 px-4">
+      <div class="col-md-6">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-primary">World</strong>
@@ -155,11 +156,11 @@ img{
             <a href="#" class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1">Continue
               reading</a>
           </div>
-          <img class="card-img-right flex-auto d-none d-lg-block" src="./Thumbnail.jpg" alt="Card image cap">
+          <img class="card-img-right flex-auto d-none d-sm-block d-md-block d-lg-block" src="./Thumbnail.jpg" alt="Card image cap">
         </div>
       </div>
 
-      <div class="col-md-6 px-4">
+      <div class="col-md-6 col-sm-10 px-4">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Design</strong>
@@ -173,7 +174,7 @@ img{
             <a href="#" class="no-text-decoration link-offset-2 link-underline link-underline-opacity-1">Continue
               reading</a>
           </div>
-          <img class="card-img-right flex-auto d-none d-lg-block" src="./Thumbnail.jpg" alt="Card image cap">
+          <img class="card-img-right flex-auto d-none d-sm-block d-md-block d-lg-block" src="./Thumbnail.jpg" alt="Card image cap">
 
         </div>
       </div>
