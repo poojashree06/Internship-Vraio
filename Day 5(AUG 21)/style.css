@@ -7,4 +7,13 @@
 #tableData{
         width: 50%;
         margin-left: 25%;
+        display:none;
           }
+.button{
+        padding-left: 45%;
+       }
+#clearButton {
+        display: none;
+    }
+/*edit and delete option show warning for edit should change to upgarde..and cancel button..it should also sorted
+according to table headers edit the ascending*/
