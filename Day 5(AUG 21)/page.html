@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js"></script>
+  
+</head>
+<body>
+    <div class="row">
+      <h1 class="mx-5">Student Details Form</h1>
+    <form class="w-50 " onsubmit="submitFormReturn();return false;">
+        <div class="mb-3 ">
+          <label for="userName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="userName">
+        </div>
+        <div class="mb-3">
+          <label for="regNo" class="form-label">Registration Number</label>
+          <input type="text" class="form-control" id="regNo">
+        </div>
+        <div class="mb-3">
+            <label for="grade" class="form-label">Grade</label>
+            <input type="text" class="form-control" id="grade">
+          </div>
+        <div class="buttons">
+        <button type="button" class="btn btn-primary" id="submit" onclick="addTableRow()">Submit</button>
+        <button type="reset" class="btn btn-danger" id="reset">Reset</button>
+    </div>
+      </form>
+    </div>
+
+    <div class="justify-content-center py-5 ">
+      <h2 class="py-2 text-center">Student Record</h4>
+      
+       <table id="tableData" class="table-bordered py-5 table-danger" cellpadding="2">
+        <tr>
+         <th>Name</th>
+         <th>Registration Number</th>
+         <th>Grade</th>
+        </tr>
+       </table>
+
+     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+</body>
+</html>
