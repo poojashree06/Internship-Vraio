@@ -1,19 +1,18 @@
 .row{
-        padding-left: 30%;
-    }
+    padding-left: 35%;
+}
 .buttons{
-        padding-left: 35%;
-        }
+    padding-left: 35%;
+}
 #tableData{
-        width: 50%;
-        margin-left: 25%;
-        display:none;
-          }
+    width: 50%;
+    margin-left: 25%;
+    display: none;
+}
 .button{
-        padding-left: 45%;
-       }
-#clearButton {
-        display: none;
-    }
-/*edit and delete option show warning for edit should change to upgarde..and cancel button..it should also sorted
-according to table headers edit the ascending*/
+    padding-left: 45%;
+    
+}
+#button{
+    display: none;
+}
