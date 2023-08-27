@@ -1,12 +1,13 @@
 .row{
-    padding-left: 35%;
+    padding-left: 30%;
+    width: 75%;
 }
 .buttons{
     padding-left: 35%;
 }
 #tableData{
-    width: 50%;
-    margin-left: 25%;
+    width: 60%;
+    margin-left: 20%;
     display: none;
 }
 .button{
@@ -14,5 +15,35 @@
     
 }
 #button{
+    display: none;
+}
+.icons{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: aqua;
+}
+h2{
+    display: none;
+    margin-left: 30%;
+}
+.sl_no{
+    width: 6%;
+}
+.name{
+    width: 20%;
+}
+.reg_no{
+    width: 20%;
+}
+.grade{
+    width: 12%;
+}
+.actions{
+    width: 35%;
+}
+
+#clearButton{
+    margin-left: 48%;
     display: none;
 }

@@ -1,81 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>details</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./style.css" />
-  
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Record</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
     <div class="row">
       <h1 class="mx-5">Student Information</h1>
-    <form class=" form w-50 " onsubmit="reset();submitFormReturn();return false;">
-        <div class="col-12 ">
-          <label for="userName" class="form-label">NAME</label>
-          <input type="text" class="form-control" id="userName" onkeypress="disableWarning_userName()">
+      <form class="w-100" id="myForm" onsubmit="">
+        <div class="col-12">
+          <label for="userName" class="form-label"
+            >NAME <span class="text-danger">*</span>
+          </label>
+          <input
+            type="text"
+            autocomplete="off"
+            class="form-control"
+            id="username"
+            onkeypress="disableWarning_userName()"
+            onkeydown="Warning_userName();return /[a-zA-Z\s]/i.test(event.key)"
+          />
         </div>
-        <div class="mb-3 ">
+        <div class="mb-3">
           <span class="text-danger" id="userNameWarning"></span>
-
         </div>
 
         <div class="col-12">
-          <label for="regNo" class="form-label">USN</label>
-          <input type="text" class="form-control" id="regNo" onkeypress="disableWarning_regNo()">
+          <label for="regNo" class="form-label"
+            >USN <span class="text-danger">*</span>
+          </label>
+          <input
+            type="text"
+            autocomplete="off"
+            class="form-control"
+            id="regNo"
+            onkeypress="disableWarning_regNo()"
+          />
         </div>
-        <div class="mb-3 ">
+        <div class="mb-3">
           <span class="text-danger" id="regNoWarning"></span>
         </div>
         <div class="col-12">
-            <label for="grade" class="form-label">MARKS</label>
-            <input type="text" class="form-control" id="grade" onkeypress="disableWarning_grade()">
-          </div>
-          <div class="mb-3 ">
-            <span class="text-danger" id="gradeWarning"></span>
-          </div>
+          <label for="grade" class="form-label"
+            >MARKS <span class="text-danger">*</span>
+          </label>
+          <input
+            type="number"
+            autocomplete="off"
+            class="form-control"
+            id="grade"
+            onkeypress="disableWarning_grade();"
+            min="0"
+            max="100"
+          />
+        </div>
+        <div class="mb-3">
+          <span class="text-danger" id="gradeWarning"></span>
+        </div>
         <div class="buttons">
-        <button type="reset" class="btn btn-success m-2" id="submit" onclick="addTableRow();">Submit</button>
-        <button type="reset" class="btn btn-danger m-2" id="reset">Reset</button>
-    </div>
+          <button
+            type="button"
+            class="btn btn-success"
+            id="submit"
+            onclick="submitAction()"
+          >
+            Submit
+          </button>
+          <button type="reset" class="btn btn-danger m-2" id="reset_btn">
+            Reset
+          </button>
+        </div>
       </form>
     </div>
 
     <div class="table justify-content-center py-5">
-      <h2 class="py-2 text-center">Student Record</h4>
-      
-       <table id="tableData" class="table-bordered py-5" cellpadding="2">
-        <tr>
-        <th>Sl.no</th>
-         <th onclick="sortTable(1);">NAME &nbsp;&nbsp;&nbsp;&nbsp; <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
-        </svg>-->
-    </th>
-         <th onclick="sortTable(2);">USN &nbsp;&nbsp;&nbsp;&nbsp; <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
-        </svg>
-    --></th>
-         <th onclick="sortTable(3);">MARKS &nbsp;&nbsp;&nbsp;&nbsp;
-           <!--  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
-        </svg>-->
-    </th>
-        <th>ACTIONS</th>
-        </tr>
-       </table>
-       <div class="button py-5 justify-content-center">
-       <button  type="button" class="btn btn-info" id="button" onClick="window.location.reload();">Clear</button>
-       </div>
+      <div class="row my-3" id="mydiv">
+        <h2 id="tableHeader">Student Record</h2>
+        <div class="d-none mx-4" id="searchdiv">
+            <button type="button" class="btn btn-light col-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" onclick="searchData()" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+          <input
+            placeholder="Search"
+            type="text"
+            class="form-control col-11"
+            id="search"
+            onkeypress="searchData()"
+            autocomplete="off"
+          />
+          
+        </div>
+      </div>
+      <table
+        id="tableData"
+        class="table-bordered py-5"
+        cellpadding="1"
+      >
+        <thead>
+          <tr>
+            <th class="sl_no">SL No</th>
+            <th class="name">
+              NAME &nbsp;&nbsp;&nbsp;&nbsp;
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                onclick="sortTable(1)"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-down-up icons"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+            </th>
+            <th class="regNo">
+              USN &nbsp;&nbsp;&nbsp;&nbsp;
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                onclick="sortTable(2)"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-down-up icons"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+            </th>
 
-     </div>
+            <th class="grade">
+              MARKS &nbsp;&nbsp;&nbsp;&nbsp;
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                onclick="sortTable(3)"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-down-up icons"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+            </th>
+            <th class="actions text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <div class="my-5">
+        <button
+          type="button"
+          class="btn btn-danger"
+          id="clearButton"
+          onclick="clearTheTable()"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"></script>
-      <script src="./script.js"></script>
-    
-</body>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </body>
+</html>
