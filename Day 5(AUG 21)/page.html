@@ -27,7 +27,7 @@
             class="form-control"
             id="username"
             onkeypress="disableWarning_userName()"
-            onkeydown="Warning_userName();return /[a-zA-Z\s]/i.test(event.key)"
+           
           />
         </div>
         <div class="mb-3">
@@ -69,7 +69,7 @@
         <div class="buttons">
           <button
             type="button"
-            class="btn btn-success"
+            class="btn btn-info"
             id="submit"
             onclick="submitAction()"
           >
@@ -109,7 +109,7 @@
       >
         <thead>
           <tr>
-            <th class="sl_no">SL No</th>
+            <th class="sl_no">SL.no</th>
             <th class="name">
               NAME &nbsp;&nbsp;&nbsp;&nbsp;
               <svg
@@ -152,8 +152,9 @@
                 width="16"
                 onclick="sortTable(3)"
                 height="16"
-                fill="currentColor"
+                fill="currentColor" 
                 class="bi bi-arrow-down-up icons"
+              </svg>
                 viewBox="0 0 16 16"
               >
                 <path
