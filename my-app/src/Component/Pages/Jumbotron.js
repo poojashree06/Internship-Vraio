@@ -2,7 +2,6 @@ import Button from "../Pages/Button";
 
 export default function Jumbotron(props){
     return(
-        <>
         <section className="jumbotron text-center">
         <div className="container">
           <h1 className="jumbotron-heading">{props.data.title}</h1>
@@ -14,8 +13,7 @@ export default function Jumbotron(props){
             <Button btncolor="btn-secondary" text="Secondary action"/>
           </p>
         </div>
-        
+      
       </section>
-        </>
     )
 };

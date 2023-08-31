@@ -4,7 +4,15 @@ import Card from '../Pages/Card'
 export default function Album() {
     let card_data = [{
         paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
-        time: 9,
+        time: 5,
+        img_url: "./Thumbnail.jpg"
+    }, {
+        paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
+        time: 4,
+        img_url: "./Thumbnail.jpg"
+    }, {
+        paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
+        time: 2,
         img_url: "./Thumbnail.jpg"
     }, {
         paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
@@ -20,15 +28,7 @@ export default function Album() {
         img_url: "./Thumbnail.jpg"
     }, {
         paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
-        time: 9,
-        img_url: "./Thumbnail.jpg"
-    }, {
-        paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
-        time: 9,
-        img_url: "./Thumbnail.jpg"
-    }, {
-        paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
-        time: 9,
+        time: 1,
         img_url: "./Thumbnail.jpg"
     }, {
         paragraph: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
