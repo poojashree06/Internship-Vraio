@@ -151,14 +151,14 @@ function disableWarning_userName() {
 }
 
 /**
- * The function disables the warning message for a registration number.
+ * The function disables the warning message for a USN.
  */
 function disableWarning_regNo() {
   regNoWarning.innerHTML = "";
 }
 
 /**
- * The function disables the warning message for a grade.
+ * The function disables the warning message for a MARKS.
  */
 function disableWarning_grade() {
   
