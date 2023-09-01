@@ -60,7 +60,6 @@ function clearSearchData()
  * table. The objects have the following properties:
  */
 function displayTable(obj) {
-
   tableBody.innerHTML = ""
   let sl = 1
   obj.forEach(element => {
@@ -89,9 +88,7 @@ function displayTable(obj) {
       </td></tr>`
       tableBody.appendChild(x)
       sl++
-  });
-
-  
+  });  
 }
 
 /**
